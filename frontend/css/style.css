@@ -228,10 +228,28 @@ footer{
 	display: inline-block;
 	width: 117px;
 }
-.home header{
-	height: 10px;
-	background: #021341;
+.home{
+	background: #011B40;
+	height: 100%;
 }
+.home header{
+    overflow: hidden;
+}
+.home header .pleca {
+    border-top: 10px solid #011B40;
+    border-bottom: 10px solid #FFFFFF;
+}
+.home footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+}
+.home footer .pleca {
+    border-bottom: 10px solid #011B40;
+    border-top: 10px solid #FFFFFF;
+}
+
 .home .content{
 	margin: 7px 0;
 }
@@ -252,12 +270,14 @@ footer{
 	padding: 30px;
 }
 .header-sec{
-	background: #F0F0F0;
-    color: #12376B;
-    text-align: center;
-    padding: 10px;
-    margin: 0 7px;
-    border-bottom: 1px solid #CFC7B0;
+	width: 70%;
+	display: inline-block;
+	float: left;    
+}
+.header-sec .title{
+	text-align: center;
+	text-align: center;
+    margin: 30px 0;
 }
 .header-sec .title span:first-child{
 	display: block;
@@ -273,10 +293,15 @@ footer{
     width: 250px;
 }
 .home .form button{
-	margin: 130px 25px 0;
+	margin: 0;
     float: right;
 }
-
+.home .pleca-gold{
+	height: 5px;
+	border-top: 2px solid #C5911B;
+	border-bottom: 2px solid #C5911B;
+	margin: 0 15px;
+}
 input[type="text"]{
 	padding: 10px;
     width: 100%;
@@ -326,4 +351,31 @@ button{
     background: #003777;
     color: #FFFFFF;
     cursor: pointer;
+}
+.printed{
+	max-width: 980px;
+	margin: 0 auto;
+}
+.printed .content{
+	padding: 0 60px;
+}
+.printed .filter{
+	width: 48.5%;
+    margin-right: 3%;
+}
+.printed .filters .filter:last-child{
+	margin-right: 0;
+}
+.printed .filter p{
+	margin: 0;
+	color: #013878;
+	font-weight: 700;
+}
+
+.printed .list-item .item{
+    width: 48.5%;   
+    margin-right: 3%;
+}
+.printed .list-item .item:nth-child(2n){
+	margin-right: 0;
 }
