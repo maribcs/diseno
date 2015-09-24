@@ -329,29 +329,32 @@ button{
 .form-group{
 	margin-bottom: 15px;
 }
-
-.captcha{
-	background: #FFF;
-    position: relative;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    padding-right: 50px;
-    color: #003777;
-    font-size: 20px;
+.captcha-block{
+	overflow: hidden;
 }
-.captcha .refresh{
-	height: 31px;
-    width: 45px;
-    line-height: 35px;
-    text-align: center;
-    display: block;
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    background: #003777;
-    color: #FFFFFF;
-    cursor: pointer;
+.captcha-content, .captcha-refresh{
+	height: 50px;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	line-height: 50px;
+	text-align: center;
+	color: #003777;
+	font-size: 20px;
+	display: inline-block;
+	vertical-align: top;	
+}
+.captcha-content{
+	width: 80%;
+	float: left
+}
+.captcha-refresh{
+	background: rgb(0, 55, 119) none repeat scroll 0% 0%;
+	color: rgb(255, 255, 255);
+	width: 20%;
+	cursor: pointer;
+}
+.captcha-refresh .refresh{
+	display: block;
+	line-height: 50px;
 }
 .printed{
 	max-width: 980px;
