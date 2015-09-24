@@ -51,10 +51,10 @@
 						</select>
 					</div>					
 				</div>		
-				<div class="list-item">
-					<div class="item">
+				<div class="list-item" >
+					<div class="item acordeon" data-item="0">
 						<div class="item-tools">
-							<span class="expand-retract icon-plus"></span>
+							<span class="expand-retract icon-plus arrow" data-to="0"></span>
 							<span class="check icon-checkmark"></span>
 						</div>
 						<div class="title">Elecciones Regionales y Municipales 2014</div>
@@ -67,9 +67,9 @@
 							<p><span class="label">Departamento</span>: Lima</p>
 						</div>
 					</div>
-					<div class="item">
+					<div class="item acordeon" data-item="1">
 						<div class="item-tools">
-							<span class="expand-retract icon-plus"></span>
+							<span class="expand-retract icon-plus arrow" data-to="1"></span>
 							<span class="check check-disabled icon-checkmark"></span>
 						</div>
 						<div class="title">Elecciones Regionales y Municipales 2014</div>
@@ -82,9 +82,9 @@
 							<p><span class="label">Departamento</span>: Lima</p>
 						</div>
 					</div>
-					<div class="item">
+					<div class="item acordeon" data-item="2">
 						<div class="item-tools">
-							<span class="expand-retract icon-plus"></span>
+							<span class="expand-retract icon-plus arrow" data-to="2"></span>
 							<span class="check icon-checkmark"></span>
 						</div>
 						<div class="title">Elecciones Regionales y Municipales 2014</div>
@@ -97,9 +97,9 @@
 							<p><span class="label">Departamento</span>: Lima</p>
 						</div>
 					</div>
-					<div class="item">
+					<div class="item acordeon" data-item="3">
 						<div class="item-tools">
-							<span class="expand-retract icon-plus"></span>
+							<span class="expand-retract icon-plus arrow" data-to="3"></span>
 							<span class="check icon-checkmark"></span>
 						</div>
 						<div class="title">Elecciones Regionales y Municipales 2014</div>
@@ -118,5 +118,24 @@
 		<footer class="">
 		</footer>
 	</div>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$( ".arrow" ).click(function() {			
+			var num = $(this).attr('data-to');
+			var arrow = $(this);
+			var content = $( ".acordeon[data-item='"+num+"'] .content" );
+						
+			if($(this).hasClass('icon-plus')){				
+				content.slideDown('slow', function (){
+					arrow.removeClass('icon-plus').addClass('icon-minus');
+				});	
+
+			} else {				
+				content.slideUp('slow', function (){
+					arrow.removeClass('icon-minus').addClass('icon-plus');
+				});	
+			}	
+		});
+	</script>
 </body>
 </html>

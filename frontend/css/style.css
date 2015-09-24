@@ -223,6 +223,7 @@ footer{
 	border-right: 1px solid #CCCCCC;
 	font-size: 14px;
     color: #333;
+    display: none;
 }
 .list-item .item .content .label{
 	display: inline-block;
