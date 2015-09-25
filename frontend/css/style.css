@@ -225,9 +225,20 @@ footer{
     color: #333;
     display: none;
 }
-.list-item .item .content .label{
+.list-item .item .content .description, .list-item .item .content .label{
+	
+}
+
+.list-item .item .content .label{	
 	display: inline-block;
-	width: 117px;
+	float: left;
+	vertical-align: top;
+	width: 120px;
+}
+.list-item .item .content .description{
+	padding-left: 10px;
+	display: block;
+	margin-left: 120px;
 }
 .home{
 	background: #011B40;
